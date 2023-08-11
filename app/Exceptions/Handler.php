@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Modules\Settings\CustomExceptions;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -25,6 +26,13 @@ class Handler extends ExceptionHandler
     {
         $this->reportable(function (Throwable $e) {
             //
+        });
+
+        $this->renderable(function (CustomExceptions $e) {
+            return response()->json([
+                'message' => $e->getMessage(),
+                'code' => $e->getCode(),
+            ], $e->getCode() ?: 500);
         });
     }
 }

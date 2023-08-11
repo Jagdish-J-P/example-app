@@ -1,0 +1,21 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Http\Request;
+use Modules\CustomResource;
+
+class {{ class }} extends CustomResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
+     */
+    public function data(Request $request): array
+    {
+        return [
+            
+        ];
+    }
+}

@@ -1,0 +1,22 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Modules\CustomModel;
+
+class {{ class }} extends CustomModel
+{
+    use HasFactory;
+
+    public function newEloquentBuilder($query): {{ class }}QueryBuilder
+    {
+        return new {{ class }}QueryBuilder($query);
+    }
+
+    public static function newFactory(): {{ class }}Factory
+    {
+        // TODO: Make sure factory exists
+        return {{ class }}Factory::new();
+    }
+}

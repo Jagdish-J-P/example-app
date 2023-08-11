@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Modules\Settings\Interfaces\SettingServiceInterface;
+use Modules\Settings\Services\SettingService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,7 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+            abstract: SettingServiceInterface::class,
+            concrete: SettingService::class
+        );
     }
 
     /**
