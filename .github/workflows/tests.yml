@@ -50,7 +50,7 @@ jobs:
       -name: Run Pint
         run: |
           ./vendor/bin/pint --test
-        
+
     services:
       mysql:
         image: mysql:8.0
