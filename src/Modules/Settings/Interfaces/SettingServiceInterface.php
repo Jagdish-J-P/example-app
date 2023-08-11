@@ -3,17 +3,19 @@
 namespace Modules\Settings\Interfaces;
 
 use App\Models\User;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 use Modules\Settings\DataTransferObjects\SettingDto;
-use Modules\Settings\Models\Setting;
 
 interface SettingServiceInterface
 {
-    public function store(User $user, SettingDto $dto): Setting;
+    public function store(User $user, SettingDto $dto): Model;
     
     /**
      * @param User $user
      * @param SettingDto[] $settings
+     * 
+     * @return Collection
      */
     public function storeMany(User $user, array $settings): Collection;
 }

@@ -9,7 +9,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 abstract class CustomResource extends JsonResource
 {
     /**
-     * @param mixed $resource
+     * @param mixed $request
      * @return JsonResponse
      */
     public function toResponse($request): JsonResponse

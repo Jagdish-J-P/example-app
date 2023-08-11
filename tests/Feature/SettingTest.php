@@ -15,7 +15,6 @@ class SettingTest extends CustomTestCase
      */
     public function guest_cannot_store_setting()
     {
-        $this->signIn();
 
         $response = $this->postJson(route('api.settings.store'), $this->validData());
 

@@ -18,9 +18,9 @@ class SettingResource extends CustomResource
     public function data(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'type' => $this->type,
-            'value' => $this->value,
+            'id' => $this->resource->id,
+            'type' => $this->resource->type,
+            'value' => $this->resource->value,
         ];
     }
 }
