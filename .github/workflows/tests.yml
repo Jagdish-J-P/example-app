@@ -42,6 +42,14 @@ jobs:
       - name: Run test suite
         run: |
           php artisan test
+      
+      -name: Run Larastan
+        run: |
+          ./vendor/bin/phpstan analyse
+
+      -name: Run Pint
+        run: |
+          .vendor/bin/pint --test
         
     services:
       mysql:
