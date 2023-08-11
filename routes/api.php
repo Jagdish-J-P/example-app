@@ -25,6 +25,7 @@ Route::post('/login', function (Request $request) {
 Route::middleware('auth:sanctum')->group(
     function () {
         Route::post('settings', SettingController::class)->name('settings.store');
+        Route::post('settings/bulk', SettingController::class)->name('settings.storeMany');
         Route::get('/user', function (Request $request) {
             return $request->user();
         });

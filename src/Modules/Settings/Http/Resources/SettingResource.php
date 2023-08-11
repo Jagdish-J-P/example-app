@@ -2,16 +2,17 @@
 
 namespace Modules\Settings\Http\Resources;
 
+use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
 use Modules\CustomResource;
+use Modules\Settings\Models\Setting;
 
-/**
- * @property Setting $resource
- */
 class SettingResource extends CustomResource
-{
+{ 
+
     /**
      * Transform the resource into an array.
+     * @property Setting $resource
      *
      * @return array<string, mixed>
      */
