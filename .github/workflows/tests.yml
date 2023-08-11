@@ -1,0 +1,34 @@
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    name: Run Tests
+    runs-on: ubunto-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+      
+      - name: Copy .env file
+        run: |
+          cp .env.ci .env
+
+      - name: Run Composer
+        run: |
+          composer install --no-interactions
+
+      - name: Run test suite
+        run: |
+          php artisan test
+        
