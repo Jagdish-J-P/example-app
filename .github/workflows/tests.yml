@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Composer
         run: |
-          composer install --no-interactions
+          composer install --no-interaction
 
       - name: Generate Key
         run: |
