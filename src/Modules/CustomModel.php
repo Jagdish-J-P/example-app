@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 abstract class CustomModel extends Model
 {
-
     public function newEloquentBuilder($query): Builder
     {
         throw new \LogicException(sprintf(

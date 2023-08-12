@@ -6,7 +6,6 @@ use Exception;
 
 class CustomExceptions extends Exception
 {
-
     public static function noValueProvided()
     {
         return new self('No value provided', 400);

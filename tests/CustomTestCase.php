@@ -17,6 +17,4 @@ abstract class CustomTestCase extends TestCase
 
         return $user;
     }
-
-    
 }

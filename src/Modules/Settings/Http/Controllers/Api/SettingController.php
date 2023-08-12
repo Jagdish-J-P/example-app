@@ -10,7 +10,6 @@ use Modules\Settings\Interfaces\SettingServiceInterface;
 
 class SettingController extends Controller
 {
-
     public function __construct(
         private SettingServiceInterface $settingService
     ) {

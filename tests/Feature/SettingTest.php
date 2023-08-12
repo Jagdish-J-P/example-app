@@ -2,10 +2,7 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Modules\Settings\Enums\SettingType;
-use Modules\Settings\Http\Controllers\Api\SettingController;
 use Tests\CustomTestCase;
 
 class SettingTest extends CustomTestCase

@@ -31,5 +31,4 @@ class Setting extends CustomModel
     {
         return SettingFactory::new();
     }
-
 }

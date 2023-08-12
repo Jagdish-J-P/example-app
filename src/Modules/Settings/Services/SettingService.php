@@ -3,7 +3,6 @@
 namespace Modules\Settings\Services;
 
 use App\Models\User;
-use Hamcrest\Core\Set;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Modules\Settings\CustomExceptions;
@@ -15,7 +14,7 @@ class SettingService implements SettingServiceInterface
 {
     public function store(User $user, SettingDto $dto): Model
     {
-        if (!$dto->value) {
+        if (! $dto->value) {
             throw CustomExceptions::noValueProvided();
         }
 
@@ -28,10 +27,7 @@ class SettingService implements SettingServiceInterface
     }
 
     /**
-     * @param User $user
-     * @param SettingDto[] $settings
-     *
-     * @return Collection
+     * @param  SettingDto[]  $settings
      */
     public function storeMany(User $user, array $settings): Collection
     {

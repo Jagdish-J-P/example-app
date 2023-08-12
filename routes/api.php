@@ -18,7 +18,7 @@ use Modules\Settings\Http\Controllers\Api\SettingController;
 Route::post('/login', function (Request $request) {
     return [
         'status' => true,
-        'token' => User::first()->createToken('token-name')->plainTextToken
+        'token' => User::first()->createToken('token-name')->plainTextToken,
     ];
 });
 
@@ -31,4 +31,3 @@ Route::middleware('auth:sanctum')->group(
         });
     }
 );
-

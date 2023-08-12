@@ -6,7 +6,6 @@ namespace Tests\Feature;
 
 use App\Models\User;
 use Tests\CustomTestCase;
-use Tests\TestCase;
 
 class ExampleTest extends CustomTestCase
 {

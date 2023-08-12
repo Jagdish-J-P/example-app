@@ -9,8 +9,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 abstract class CustomResource extends JsonResource
 {
     /**
-     * @param mixed $request
-     * @return JsonResponse
+     * @param  mixed  $request
      */
     public function toResponse($request): JsonResponse
     {
@@ -27,5 +26,5 @@ abstract class CustomResource extends JsonResource
         return $this->data($request);
     }
 
-    abstract function data(Request $request): array;
+    abstract public function data(Request $request): array;
 }

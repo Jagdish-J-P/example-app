@@ -24,7 +24,7 @@ class SettingsStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'type' => ['required','string', new Enum(SettingType::class)],
+            'type' => ['required', 'string', new Enum(SettingType::class)],
             'value' => 'required|string',
         ];
     }

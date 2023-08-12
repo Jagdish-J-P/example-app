@@ -9,11 +9,10 @@ class CustomResourceResponse extends ResourceResponse
 {
     /**
      * Wrap the given data if necessary.
-     * 
+     *
      * @param  mixed  $data
      * @param  array  $with
      * @param  array  $additionalData
-     * 
      * @return array
      */
     protected function wrap($data, $with = [], $additionalData = [])
